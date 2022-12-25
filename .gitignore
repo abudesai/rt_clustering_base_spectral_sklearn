@@ -1,0 +1,22 @@
+
+local_test/ml_vol/
+**/test_results/
+**/artifacts
+artifacts/
+hpt_results/
+test_results/
+
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/ 
+env.bak/
+venv.bak/
