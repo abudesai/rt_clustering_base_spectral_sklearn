@@ -23,7 +23,6 @@ class ClusteringModel:
     def build_model(self):
         model = SpectralClustering(
             n_clusters=self.K,
-            verbose=self.verbose,
             eigen_solver="arpack",
             affinity="nearest_neighbors",
             random_state=1,

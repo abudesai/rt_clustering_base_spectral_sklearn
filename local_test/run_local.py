@@ -89,10 +89,8 @@ def copy_example_files(dataset_name):
     # data schema
     shutil.copyfile(f"{local_datapath}/{dataset_name}/{dataset_name}_schema.json", os.path.join(data_schema_path, f"{dataset_name}_schema.json"))
     # data
-    shutil.copyfile(f"{local_datapath}/{dataset_name}/{dataset_name}_test.csv", os.path.join(data_path, f"{dataset_name}_test.csv"))
-    # hyperparameters
-    shutil.copyfile("./examples/hyperparameters.json", os.path.join(hyper_param_path, "hyperparameters.json"))
-
+    shutil.copyfile(f"{local_datapath}/{dataset_name}/{dataset_name}.csv", os.path.join(data_path, f"{dataset_name}_test.csv"))
+    
 
 def train_and_predict():
     # Read hyperparameters
@@ -272,8 +270,20 @@ if __name__ == "__main__":
     num_hpt_trials = None
     run_hpt_list = [False]
 
-    datasets = "car concentric_circles four_worms iris penguins statlog steel_plate_fault unequal_variance_blobs wine".split()
-    # datasets = ["steel_plate_fault"]
+    datasets = [
+        "concentric_circles",
+        "gesture_phase2",
+        "iris",
+        "landsat_satellite2",
+        "page_blocks2",
+        "penguins",
+        "spam2",
+        "steel_plate_fault2",
+        "unequal_variance_blobs",
+        "vehicle_silhouettes2",
+    ]
+    datasets = ["iris"]
+
 
     for run_hpt in run_hpt_list:    
         all_results = []    
