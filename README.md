@@ -2,6 +2,7 @@ Spectral clustering model built in Sklearn for Clustering - Base problem categor
 
 - spectral clustering
 - clustering
+- svd
 - sklearn
 - python
 - pandas
