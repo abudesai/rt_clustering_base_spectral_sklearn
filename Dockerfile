@@ -24,5 +24,5 @@ ENV PATH="/opt/app:${PATH}"
 
 
 RUN chmod +x train_predict 
-
+RUN chown -R 1000:1000 /opt/app/ 
 USER 1000
